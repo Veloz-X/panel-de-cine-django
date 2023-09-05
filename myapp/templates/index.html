@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="flex justify-center items-center py-20 bg-gray-100 my-auto h-full">
+    <div class="grid grid-cols-3 gap-4">
+        <a href="{% url 'vender' %}" class="flex flex-col items-center justify-center w-40 h-40 bg-indigo-500 rounded-3xl">
+            <i class="fas fa-heart text-white"></i>
+            <span class="mt-1 text-white text-center font-semibold">Vender Entrada</span>
+        </a>
+        <a href="{% url 'peliculas' %}" class="flex flex-col items-center justify-center w-40 h-40 bg-indigo-500 rounded-3xl">
+            <i class="fas fa-star text-white"></i>
+            <span class="mt-1 text-white text-center font-semibold">Lista de Peliculas</span>
+        </a>
+        <a href="{% url 'lista_ventas' %}" class="flex flex-col items-center justify-center w-40 h-40 bg-indigo-500 rounded-3xl">
+            <i class="fas fa-star text-white"></i>
+            <span class="mt-1 text-white text-center font-semibold">Lista de Ventas</span>
+        </a>
+    </div>
+</div>
+{% endblock %}

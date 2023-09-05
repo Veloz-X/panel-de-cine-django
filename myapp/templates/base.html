@@ -1,0 +1,20 @@
+<script src="https://cdn.tailwindcss.com"></script>
+<div class=" text-center flex justify-center items-center bg-gray-200">
+
+  <div class=" flex p-4">
+    <a href="{% url 'index' %}"
+      class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none mx-auto">
+      Inicio
+    </a>
+  </div>
+  {% if request.user.is_authenticated %}
+  <div class=" flex p-4">
+    <a href="{% url 'logout' %}"
+      class="hover:shadow-form rounded-md bg-red-500 py-3 px-8 text-center text-base font-semibold text-white outline-none mx-auto">
+      Cerrar Sesión
+    </a>
+  </div>
+  {% endif %}
+</div>
+{% block content %}
+{% endblock %}

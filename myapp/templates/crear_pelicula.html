@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="flex justify-center items-center py-20 bg-gray-100 my-auto h-full">
+    <form method="POST">
+        {% csrf_token %}
+        {% load static %}
+
+        <form class="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="{{ form.name.id_for_label }}">Nombre de la pelicula</label>
+                {{ form.name }}
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="{{ form.img.id_for_label }}">URL de imagen de la pelicula</label>
+                {{ form.img }}
+            </div>
+            <div class="flex justify-center">
+                <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Crear Pelicula</button>
+            </div>
+        </form>
+       
+    </form>
+</div>
+
+{% endblock  %}
